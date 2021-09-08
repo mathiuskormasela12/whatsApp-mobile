@@ -1,14 +1,27 @@
 // ========== Auth
 // import all modules
 import React, {Component, Fragment} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+
+// import all components
+import {AuthHeader, Container, PhoneNumberField, Button} from '../components';
 
 class Auth extends Component {
 	render() {
 		return (
 			<Fragment>
-				<View style={styled.container}>
-					<Text style={styled.title}>Auth</Text>
+				<View style={styled.hero}>
+					<Container size={75}>
+						<AuthHeader />
+						<View style={styled.form}>
+							<View style={styled.control}>
+								<PhoneNumberField />
+							</View>
+							<View style={styled.control}>
+								<Button>Send</Button>
+							</View>
+						</View>
+					</Container>
 				</View>
 			</Fragment>
 		);
@@ -18,11 +31,12 @@ class Auth extends Component {
 export default Auth;
 
 const styled = StyleSheet.create({
-	container: {
+	hero: {
 		flex: 1,
 		backgroundColor: 'white',
 	},
-	title: {
-		fontFamily: 'ProximaNova-Regular',
+	form: {},
+	control: {
+		marginBottom: 50,
 	},
 });
