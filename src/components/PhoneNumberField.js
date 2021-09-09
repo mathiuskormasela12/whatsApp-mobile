@@ -22,9 +22,10 @@ export function PhoneNumberField() {
 				<View style={styled.rightSide}>
 					<TextInput
 						style={styled.textInput}
-						placeholder="895326176440"
+						placeholder="Phone Number"
 						placeholderTextColor={Gray}
 						keyboardType="phone-pad"
+						maxLength={14}
 					/>
 				</View>
 			</View>
@@ -37,9 +38,10 @@ const styled = StyleSheet.create({
 		backgroundColor: 'rgba(243, 243, 243, 0.5)',
 		width: '100%',
 		height: 50,
-		paddingHorizontal: 20,
+		paddingHorizontal: 25,
 		flexDirection: 'row',
 		alignItems: 'center',
+		justifyContent: 'space-between',
 	},
 	flag: {
 		width: 30,
@@ -64,14 +66,16 @@ const styled = StyleSheet.create({
 	leftSide: {
 		flexDirection: 'row',
 		alignItems: 'center',
-		flex: 1,
+		justifyContent: 'flex-end',
+		width: '28%',
 	},
 	rightSide: {
-		flex: 2,
+		width: '71%',
 	},
 	textInput: {
 		width: '100%',
 		height: '100%',
 		color: Dark,
+		fontSize: 16,
 	},
 });
