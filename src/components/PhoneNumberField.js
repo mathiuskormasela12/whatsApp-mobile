@@ -6,7 +6,7 @@ import {View, Text, TextInput, StyleSheet} from 'react-native';
 // import all colors
 import {Danger, Dark, Gray, Light} from '../styles/colors';
 
-export function PhoneNumberField() {
+export function PhoneNumberField(props) {
 	return (
 		<Fragment>
 			<View style={styled.input}>
@@ -26,6 +26,8 @@ export function PhoneNumberField() {
 						placeholderTextColor={Gray}
 						keyboardType="phone-pad"
 						maxLength={14}
+						onChangeText={props.onChangeText}
+						value={props.value}
 					/>
 				</View>
 			</View>
@@ -42,6 +44,7 @@ const styled = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'space-between',
+		borderRadius: 9,
 	},
 	flag: {
 		width: 30,
@@ -77,5 +80,6 @@ const styled = StyleSheet.create({
 		height: '100%',
 		color: Dark,
 		fontSize: 16,
+		fontFamily: 'Geometria',
 	},
 });

@@ -11,7 +11,7 @@ export function AuthHeader() {
 	return (
 		<Fragment>
 			<View style={styled.header}>
-				<Logo style={styled.img} />
+				<Logo style={styled.img} width={100} height={100} />
 				<Text style={styled.title}>Welcome to WhatsApp</Text>
 			</View>
 		</Fragment>
@@ -22,7 +22,7 @@ const styled = StyleSheet.create({
 	header: {
 		height: 'auto',
 		backgroundColor: Light,
-		marginBottom: 60,
+		marginBottom: 40,
 	},
 	title: {
 		marginTop: 35,
@@ -34,8 +34,6 @@ const styled = StyleSheet.create({
 	},
 	img: {
 		alignSelf: 'center',
-		height: 100,
-		width: 100,
 		resizeMode: 'contain',
 	},
 });

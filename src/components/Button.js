@@ -21,7 +21,7 @@ const styled = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: Primary,
-		borderRadius: 20,
+		borderRadius: 25,
 	},
 	text: {
 		color: Light,
